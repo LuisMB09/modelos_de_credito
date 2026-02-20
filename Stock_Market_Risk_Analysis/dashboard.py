@@ -436,7 +436,7 @@ if ticker:
         with col1:
             st.metric(
                 "Probability of Default",
-                f"{merton_results['PD']:.2%}",
+                f"{merton_results['PD']:.4%}",
                 delta=None
             )
         
@@ -510,7 +510,7 @@ if ticker:
             
             summary_data = {
                 "Model": ["Altman Z-Score", "Merton Structural"],
-                "Score/Metric": [f"{z_value:.4f}", f"{merton_results['PD']:.2%} PD"],
+                "Score/Metric": [f"{z_value:.4f}", f"{merton_results['PD']:.4%} PD"],
                 "Classification": [
                     recommendation.split('.')[0],
                     merton_msg.split('.')[0]
