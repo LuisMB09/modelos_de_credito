@@ -137,8 +137,8 @@ def classify_risk(pd: float) -> str:
     else:
         return "Below A rating. Loan denied"
 
-if __name__ == "__main__":
-
+def main():
+    
     ticker = input("Enter the stock ticker symbol: ").upper()
     rf = float(input("Enter the risk-free rate (e.g., 0.035 for 3.5%): "))
     T = float(input("Enter time to maturity in years (default 2): ") or 2)
@@ -161,3 +161,6 @@ if __name__ == "__main__":
     print(f'Market Value of Equity (E): ${E:,.2f}')
 
     print(f'\nRisk Classification: {classify_risk(summary["Probability of Default (PD)"])}')
+
+if __name__ == "__main__":
+    main()

@@ -149,7 +149,7 @@ def classify_z_double_prime(z_double_prime: float) -> str:
     else:
         return "Safe zone. Approve for a loan."
 
-if __name__ == "__main__":
+def main():
     ticker = input("Enter the ticker symbol of the company: ").upper()
 
     bs, ist, price, shares, sector = fetch_company_data(ticker)
@@ -178,3 +178,6 @@ if __name__ == "__main__":
        
     else:
         print(f"The sector of the company with ticker {ticker} is not recognized for Altman Z-score analysis.")
+
+if __name__ == "__main__":
+    main()
